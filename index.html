@@ -23,7 +23,7 @@
     </header>
     <main>
         <!-- phones will be searched here -->
-        <section class="container w-25 mt-5">
+        <section class="container-fluid w-50 mt-5">
             <div class="d-flex " role="search">
                 <input id='input-field' class="form-control me-2" type="search" placeholder="Type in your phone name"
                     aria-label="Search">
@@ -34,6 +34,15 @@
         <!-- phones will be displayed here -->
         <section id="" class="mx-auto p-5">
             <div id="phone-container" class="row gap-3 p-5 d-flex justify-content-center"></div>
+            <div id="no-phone-message" class="mx-auto p-5 d-none">
+                <h1 class="text-center text-warning">No phones found</h1>
+            </div>
+        </section>
+        <section class="d-flex justify-content-center align-items-center">
+            <div class="spinner-border text-success " role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+
         </section>
     </main>
 
