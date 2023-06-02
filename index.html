@@ -25,20 +25,29 @@
         <!-- phones will be searched here -->
         <section class="container-fluid w-50 mt-5">
             <div class="d-flex " role="search">
-                <input id='input-field' class="form-control me-2" type="search" placeholder="Type in your phone name"
-                    aria-label="Search">
-                <button id='control-btn' onclick="phoneBrand()" class="btn btn-outline-success"
+                <!-- search field -->
+                <input onkeypress="keyPress()" id='input-field' class="form-control me-2" type="search"
+                    placeholder="Type in your phone name" aria-label="Search">
+                <!-- search button -->
+                <button id='control-btn' onclick="searchPhone()" class="btn btn-outline-success"
                     type="submit">Search</button>
             </div>
         </section>
         <!-- phones will be displayed here -->
         <section id="" class="mx-auto p-5">
             <div id="phone-container" class="row gap-3 p-5 d-flex justify-content-center"></div>
+            <!-- show all button -->
+            <div id='show-all-btn' class="text-center d-none">
+                <button onclick='showAll()' class="btn btn-outline-success">Show all</button>
+            </div>
+            <!-- no found message -->
             <div id="no-phone-message" class="mx-auto p-5 d-none">
                 <h1 class="text-center text-warning">No phones found</h1>
             </div>
         </section>
-        <section class="d-flex justify-content-center align-items-center">
+
+        <!-- loader -->
+        <section id='loader' class="d-flex justify-content-center align-items-center d-none">
             <div class="spinner-border text-success " role="status">
                 <span class="visually-hidden">Loading...</span>
             </div>
