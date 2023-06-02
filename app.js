@@ -20,18 +20,19 @@ const phoneBrand = async () => {
 
 /* displays phones */
 const loadPhones = (phones) => {
-    console.log(phones)
     // 1. get the phone container where you want to put the phones
     const phonesContainer = document.getElementById('phone-container');
+    //2. clear container
+    phonesContainer.innerHTML = "";
     phones.forEach(phone => {
-        // 2. create new element
+        // 3. create new element
         const newDiv = document.createElement('div');
-        // 3. add styles to the element
+        // 4. add styles to the element
         newDiv.style.width = '18rem';
-        // 4. add classlist 'card'
+        // 6. add classlist 'card'
         newDiv.classList.add('card');
         newDiv.classList.add('g-col-4');
-        // 5. loop through the phone
+        // 7. loop through the phone
 
         newDiv.innerHTML = `
         <img src='${phone.image}' class="card-img-top" alt="...">
@@ -40,6 +41,7 @@ const loadPhones = (phones) => {
              card's content.</p>
         </div>
         `
+        //8. append div
         phonesContainer.appendChild(newDiv);
     })
 }
